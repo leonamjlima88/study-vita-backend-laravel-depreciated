@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
+use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
+
+/**
+ * Brand (Marca)
+ */
+Route::group([
+  'middleware' => [
+    'api', 
+    InitializeTenancyByDomain::class, 
+    PreventAccessFromCentralDomains::class,
+    'cors', 
+    'jwt', 
+    'acl', 
+    'X-Locale'
+  ],
+  'namespace' => 'App\Http\Controllers\Tenant\Brand',
+  'prefix' => '',
+], function () {
+  Route::get("/brand",         "BrandController@index")->name("brand.index");
+  Route::post("/brand",        "BrandController@store")->name("brand.store");
+  Route::get("/brand/{id}",    "BrandController@show")->name("brand.show");
+  Route::put("/brand/{id}",    "BrandController@update")->name("brand.update");
+  Route::delete("/brand/{id}", "BrandController@destroy")->name("brand.destroy");
+});
