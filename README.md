@@ -1,4 +1,4 @@
-## About
+## Sobre
 Não foi desenvolvido frontend para este backend
 
 ## Recursos
