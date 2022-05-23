@@ -10,4 +10,4 @@ Não foi desenvolvido frontend para este backend
 - Multi linguagem (Português e Inglês)
 - Laravel Telescope
 - Controler, Service, Repository, DTO
-- Relacionamentos e validações maix complexas
+- Relacionamentos e validações mais complexas
